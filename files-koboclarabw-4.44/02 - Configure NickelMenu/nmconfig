@@ -1,0 +1,31 @@
+# --- NAVBAR --------------------------------------------------------------------------------------
+
+experimental : menu_main_15505_label        : Nickel
+experimental : menu_main_15505_icon	        : /mnt/onboard/.adds/nm/.icon.png
+experimental : menu_main_15505_0_enabled    : 1
+experimental : menu_main_15505_1_label      : Library
+experimental : menu_main_15505_2_enabled    : 1
+experimental : menu_main_15505_4_enabled	: 1
+experimental : menu_main_15505_5_enabled	: 1
+experimental : menu_main_15505_default	    : 1
+experimental : menu_main_15505_enabled	    : 1
+
+# --- MAIN ----------------------------------------------------------------------------------------
+
+# Command Actions
+menu_item : main : KOReader	: cmd_spawn : quiet : exec /mnt/onboard/.adds/koreader/koreader.sh
+
+# Nickel_Setting Actions
+menu_item : main : WiFi Toggle		: nickel_setting : toggle :force_wifi
+	                                  chain_success : nickel_wifi : toggle
+
+# Power Actions
+menu_item : main : Reboot   : power : reboot
+menu_item : main : Sleep    : power : sleep
+menu_item : main : Shutdown : power : shutdown
+
+# Nickel_Misc Actions
+menu_item : main : Import Books     : nickel_misc : rescan_books_full
+menu_item : main : Rescan           : nickel_misc : rescan_books
+menu_item : main : USB Connect      : nickel_misc : force_usb_connection
+
