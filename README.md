@@ -33,6 +33,16 @@ KOReader provides additional features over the native Kobo such as:
 
 https://github.com/koreader/koreader/wiki/Installation-on-Kobo-devices
 
+### Kobo Plugin
+
+The Kobo Plugin for KOReader enables seamless integration with your Kobo device’s native library. This plugin creates a virtual library that allows you to browse and read kepub books from your Kobo’s Nickel OS directly within KOReader, while maintaining synchronization of reading progress between both applications.
+
+This plugin is needed to make the Kobo Remote work within KOReader ([reddit post](https://www.reddit.com/r/koreader/comments/1px46v6/release_v030_kobokoplugin/))
+
+https://github.com/OGKevin/kobo.koplugin
+https://ogkevin.github.io/kobo.koplugin/
+
+
 ## Setup Guide
 
 High-level steps:
@@ -40,6 +50,7 @@ High-level steps:
 1. Install NickelMenu
 1. Configure NickelMenu
 1. Install KOReader
+1. Install Kobo Plugin
 
 ### 1. Install NickelMenu
 
@@ -92,6 +103,28 @@ Quick context: KOReader installs a bunch of files that appear in your "My Books"
 1. Safely eject and reboot - you should now be able to launch KOReader from the new option in NickelMenu
 
 *Sidenote: I had to go through these steps multiple times for it to work. There are multiple guides that provide their own files to install. Ultimately, following these steps with the official files listed above worked.*
+
+### 4. Install Kobo Plugin
+
+https://ogkevin.github.io/kobo.koplugin/installation.html
+
+1. Download the latest release
+    * Go to the [latest release page](https://github.com/OGKevin/kobo.koplugin/releases)
+    * Download `kobo.koplugin.zip` and `kobo-patches.zip`
+
+1. Extract and install the plugin
+    * Extract `kobo.koplugin.zip` to obtain the `kobo.koplugin/` folder
+    * Copy the entire `kobo.koplugin/` folder to your KOReader plugins directory on the Kobo device
+    * The final path should be: `[KOReader]/plugins/kobo.koplugin/`
+    
+1. Extract and install the patches
+    * Extract `kobo-patches.zip` to get the patch files (e.g., 2-*.lua)
+    * Copy these patch files directly into your KOReader patches folder on the Kobo device
+    * Final location: `[KOReader]/patches/2-*.lua` (patch files directly in the patches folder)
+    * Note: The patches folder may be missing; create `[KOReader]/patches/` if needed.
+
+1. Restart KOReader
+    * Restart KOReader on your Kobo device for the plugin to load and become active
 
 ## Setup Notes
 
